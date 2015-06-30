@@ -1,0 +1,43 @@
+Code provided in this repository includes all key functions necessary
+for reproducing our main results. We did our best to document the code but
+there are likley to be some bits that need clarification. If you have
+any questions please feel free to contact Andrew Azman
+(azman@jhu.edu).
+Updated: 26-Feb-2015
+
+Key Files:
+| File Name                             | Description                                                                                                                             |
+|---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------|
+| base-functions.R                      | include key model functions for main MRSE analyses                                                                                      |
+| 2pathcalibration.R                    | calibration of 2-path model and accompanying plots shown in appendix                                                                    |
+| leakyvac-pomp-model-inC-novac.R       | functions for getting zim and conakry data and for building un vaccinated pomp models, this was used for fitting uncontrolled epidemics |
+| leakyvac-pomp-model-inC-1dose-con.R   | 1 dose vaccination pomp model for conakry                                                                                               |
+| leakyvac-pomp-model-inC-2dose-con.R   | 2 dose vaccination pomp model for conakry                                                                                               |
+| leakyvac-pomp-model-inC-1dose-zim.R   | 1 dose vaccination pomp model for zimbabwe                                                                                              |
+| leakyvac-pomp-model-inC-2dose-zim.R   | 1 dose vaccination pomp model for zimbabwe                                                                                              |
+| leakyvac-pomp-model-inC-1dose-haiti.R | 1 dose vaccination pomp model for port-au-prince                                                                                        |
+| leakyvac-pomp-model-inC-2dose-haiti.R | 1 dose vaccination pomp model for port-au-prince                                                                                        |
+| leakyvac-pomp-model-inC.R             | pomp model without seasonality (used for Zim and Conakry|
+| leakyvac-pomp-model-inC-seas.R        | pomp model with seasonality (used for Haiti)                                                                                            |
+| pomp-novac-fitting.R                  | Fitting of uncontrolled epidemics in Zimbabwe and Conakry and Port-Au-Prince                                                            |
+| con-vac-pomp.R                        | vacccination simulations for conakry and a few plots                                                                                    |
+| zim-vac-pomp.R                        | vaccination simulations for zimbabwe and a few plots                                                                                    |
+| haiti-vac-pomp.R                      | vaccination simulations for haiti and a few plots                                                                                       |
+| leakyruns.R                           | sweep of runs for severity reducing vaccine with varying vaccination times, doses, and VEs (used to make data for Figure 4)             |
+| vesruns.R                             | sweep of runs for susceptibility reducing vaccine with varying vaccination times, doses, and VEs (used to make data for Figure 4)       |
+| aonruns.R                             | sweep of runs for all-or-nothing vaccine with varying vaccination times, doses, and VEs (used to make data for Figure 4)                |
+| min-ves.R                             | code to estimate MRSE for VE_S model                                                                                                    |
+| min-aon.R                             | code to estimate MRSE for all or nothing model                                                                                          |
+| min-leaky.R                           | code to estimate the MRSE for VE_SP model                                                                                               |
+| paperplots.R                          | script file for making plots from main text                                                                                             |
+
+
+Included Data:
+| File Name                                 | Description                                                                              |
+|-------------------------------------------+------------------------------------------------------------------------------------------|
+| Li_vibriosurvivial.csv                    | extracted vibrio survival data from Li et al, 2014                                       |
+| zimepicurve-imputed.csv                   | data from Reyburn et al from Zimbabawe epidemic                                          |
+| cholera\ en\ guinee\ 2012_preliminary.csv | data from Epicentre on conakry outbreak                                                  |
+| portauprince.csv                          | data extracted from plots on MSPP website (used column labeled cases.whole for analyses) |
+| 1dosetrials-meansvar.csv                  | one-dose VE estimates                                                                    |
+| 2dosetrials-meansvar.csv                  | two-dose VE estimates                                                                    |                                            |                                                                                          |
