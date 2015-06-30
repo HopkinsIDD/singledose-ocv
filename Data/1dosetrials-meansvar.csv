@@ -1,0 +1,3 @@
+Location,Mean-VE,VE-l,VE-u,Mean-RR,RR-l,RR-u,Vaccine,Year,Duration-months,Author,StudyDesign,Estimator
+Guinea,0.428,-0.836,0.822,0.572,0.178,1.836,Shanchol,2014,6,Luquero et al.,Observational,OR
+Tanzania,0.46,-0.8,0.83,0.54,0.17,1.8,Dukoral,2012,3,Khatib,Observational,RR

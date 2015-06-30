@@ -21,26 +21,26 @@ get.zim.data <- function(){
 }
 
 ## gets conakry data
-get.conakry.data <- function(conakry.only=TRUE){
-    gc <- read.csv("Data/cholera\ en\ guinee\ 2012_preliminary.csv",as.is=T)
-    ## limit to conakry only
-    if(conakry.only)
-        gc <- subset(gc,pref=="conakry")
+get.conakry.data <- function(conakry.only=TRUE,from.cleaned=TRUE){
+    if (from.cleaned){
+        rc <- read.csv("Data/conakry_data_clean.csv",as.is=T)
+    } else{
+        gc <- read.csv("Data/cholera\ en\ guinee\ 2012_preliminary.csv",as.is=T)
+        ## limit to conakry only
+        if(conakry.only)
+            gc <- subset(gc,pref=="conakry")
 
-    gc$datee <- as.Date(gc$datee,"%m/%d/%y")
-    day.range <- data.frame(day=seq.Date(min(gc$datee),max(gc$datee),by=1))
-    ec.con <- tapply(gc[,1],gc$datee,length)
+        gc$datee <- as.Date(gc$datee,"%m/%d/%y")
+        day.range <- data.frame(day=seq.Date(min(gc$datee),max(gc$datee),by=1))
+        ec.con <- tapply(gc[,1],gc$datee,length)
 
-    rc <- data.frame(day=as.Date(names(ec.con)),cases=ec.con)
-    rc <- merge(rc,day.range,all.y=TRUE)
-    rc <- ifelse(is.na(rc[,2]),0,rc[,2])
-    rc <- data.frame(day=0:(nrow(day.range)-1),cases=as.numeric(rc))
-    ## ec.full <- tapply(gc.full[,1],gc.full$datee,length)
-    ## pdf("Plots/conakryvscountry.pdf")
-    ## plot(as.Date(names(ec.full)),as.numeric(ec.full),type="h")
-    ## points(as.Date(names(ec.con)),as.numeric(ec.con),type="h",col=2)
-    ## dev.off()
-    return(rc)
+        rc <- data.frame(day=as.Date(names(ec.con)),cases=ec.con)
+        rc <- merge(rc,day.range,all.y=TRUE)
+        rc <- ifelse(is.na(rc[,2]),0,rc[,2])
+        rc <- data.frame(day=0:(nrow(day.range)-1),cases=as.numeric(rc))
+
+    }
+        return(rc)
 }
 ## ---------------------------- ##
 ## Load required libraries etc. ##
