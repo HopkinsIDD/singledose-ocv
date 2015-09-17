@@ -72,8 +72,7 @@ test <- ode(initial.state,
             parms=params,
             vac.starts=c(10,19),
             vac.ends=c(15,23),
-            daily.vac=5000,
-            n.comps.slow=3)
+            daily.vac=5000)
 
 test <- add.colnames(test,model.type = "2path")
 plot(test)
@@ -91,8 +90,7 @@ for (n in seq_along(nu.seq)){
                parms=params,
                vac.starts=c(1e6,1e6),
                vac.ends=c(1e7,1e7),
-               daily.vac=5000,
-               n.comps.slow=3)
+               daily.vac=5000)
     tmp <- add.colnames(tmp,model.type = "2path")
     epi.curve <- diff(tmp[,"CI"])
     timings[n,1] <- which.max(epi.curve) #peak
@@ -120,8 +118,7 @@ for (n in seq_along(nu.seq)){
                parms=params,
                vac.starts=c(1e6,1e6),
                vac.ends=c(1e7,1e7),
-               daily.vac=5000,
-               n.comps.slow=3)
+               daily.vac=5000)
     tmp <- add.colnames(tmp,model.type = "2path")
     epi.curve <- diff(tmp[,"CI"])
     lines(epi.curve,col=cols[n])
@@ -172,8 +169,7 @@ for (n in seq_along(nu.seq)){
                parms=params,
                vac.starts=c(1e6,1e6),
                vac.ends=c(1e7,1e7),
-               daily.vac=5000,
-               n.comps.slow=3)
+               daily.vac=5000)
     tmp <- add.colnames(tmp,model.type = "2path")
     epi.curve <- diff(tmp[,"CI"])
     timings[n,1] <- which.max(epi.curve) #peak
@@ -193,8 +189,7 @@ for (n in seq_along(nu.seq)){
                parms=params,
                vac.starts=c(1e6,1e6),
                vac.ends=c(1e7,1e7),
-               daily.vac=5000,
-               n.comps.slow=3)
+               daily.vac=5000)
     tmp <- add.colnames(tmp,model.type = "2path")
     epi.curve <- diff(tmp[,"CI"])
     lines(epi.curve,col=cols[n])
