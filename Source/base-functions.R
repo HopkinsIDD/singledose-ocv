@@ -2275,3 +2275,19 @@ simulate.zim.vac <- function(n.sims,
 evpc <- function(x,...){
     sapply(x,function(y) eval(parse(text=y)))
 }
+
+##' Adds alpha to a set of colors
+##' NOTE: I took this code from somewhere online but don't rememebr where
+##' a long time ago
+##' @title
+##' @param COLORS
+##' @param ALPHA
+##' @return
+AddAlpha <- function(COLORS, ALPHA){
+    if(missing(ALPHA)) stop("provide a value for alpha between 0 and 1")
+    RGB <- col2rgb(COLORS, alpha=TRUE)
+    RGB[4,] <- round(RGB[4,]*ALPHA)
+    NEW.COLORS <- rgb(RGB[1,], RGB[2,], RGB[3,], RGB[4,], maxColorValue = 255)
+    return(NEW.COLORS)
+}
+

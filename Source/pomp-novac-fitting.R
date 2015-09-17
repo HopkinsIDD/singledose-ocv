@@ -1,7 +1,7 @@
 ###################################################################
 ## An attempt to really nail down unvac fits for zim and conakry ##
 ###################################################################
-source("Source/R/leakyvac-pomp-model-inC-novac.R")
+source("Source/leakyvac-pomp-model-inC-novac.R")
 library(pomp)
 palette(brewer.pal(8,"Set1"))
 set.seed(243947892)
@@ -901,7 +901,7 @@ range(approx(seq(0,1,length=30),beta.seq,ci.lines[[2]]$x)$y/approx(seq(0,1,lengt
 ## we will start with the first wave only ##
 ## -------------------------------------- ##
 
-source("Source/R/leakyvac-pomp-model-inC-novac-seasonal.R")
+source("Source/leakyvac-pomp-model-inC-novac-seasonal.R")
 
 ## need to get a better population estimate
 ## this is likley to be tricky given the IDP

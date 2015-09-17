@@ -3,7 +3,7 @@
 ## by doses and time                                                  ##
 ## ------------------------------------------------------------------ ##
 
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 
 ## two dose eff
 ve2 <- 0.80

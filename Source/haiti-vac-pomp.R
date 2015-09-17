@@ -1,4 +1,4 @@
-source("Source/R/leakyvac-pomp-model-inC-seas.R")
+source("Source/leakyvac-pomp-model-inC-seas.R")
 palette(brewer.pal(8,"Set1"))
 set.seed(243947892)
 

@@ -3,7 +3,7 @@
 ## Here we calculate Incidence rates in both vaccinated and unvaccinated                                                ##
 ## and final size in addtion to the null epidemic                                                                    ## ##
 ## -------------------------------------------------------------------------------------------------------------------- ##
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 library(parallel)
 library(dplyr)
 library(magrittr)
@@ -146,5 +146,3 @@ my.biglist <- mcmapply(run.ves,
                        mc.cores=my.cores)
 
 save(my.biglist,file=sprintf("GeneratedData/leakyruns_VE20p%.0f_betaSAB-REV.rda",ve2*100))
-
-

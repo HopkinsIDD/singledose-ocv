@@ -4,7 +4,7 @@
 ## Here we calculate Incidence rates in both vaccinated and unvaccinated                                                ##
 ## and final size in addtion to the null epidemic                                                                    ## ##
 ## -------------------------------------------------------------------------------------------------------------------- ##
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 library(parallel)
 library(dplyr)
 library(magrittr)

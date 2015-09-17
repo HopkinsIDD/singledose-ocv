@@ -1,7 +1,7 @@
 ## ----------------------------------------------- ##
 ## Script for playing around with 2 path VES model ##
 ## ----------------------------------------------- ##
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 
 ## read in virbio survival data
 vib.surv <- read.csv("Data/Li_vibriosurvivial.csv")

@@ -2,8 +2,7 @@
 ## functions for running Conakry vaccination simulations ##
 ## for single dose paper                                 ##
 ###########################################################
-
-source("Source/R/leakyvac-pomp-model-inC.R")
+source("Source/leakyvac-pomp-model-inC.R")
 palette(brewer.pal(8,"Set1"))
 set.seed(243947892)
 

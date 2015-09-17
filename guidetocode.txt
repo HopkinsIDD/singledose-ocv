@@ -14,9 +14,9 @@ Key Files:
 | leakyvac-pomp-model-inC-1dose-con.R   | 1 dose vaccination pomp model for conakry                                                                                               |
 | leakyvac-pomp-model-inC-2dose-con.R   | 2 dose vaccination pomp model for conakry                                                                                               |
 | leakyvac-pomp-model-inC-1dose-zim.R   | 1 dose vaccination pomp model for zimbabwe                                                                                              |
-| leakyvac-pomp-model-inC-2dose-zim.R   | 1 dose vaccination pomp model for zimbabwe                                                                                              |
+| leakyvac-pomp-model-inC-2dose-zim.R   | 2 dose vaccination pomp model for zimbabwe                                                                                              |
 | leakyvac-pomp-model-inC-1dose-haiti.R | 1 dose vaccination pomp model for port-au-prince                                                                                        |
-| leakyvac-pomp-model-inC-2dose-haiti.R | 1 dose vaccination pomp model for port-au-prince                                                                                        |
+| leakyvac-pomp-model-inC-2dose-haiti.R | 2 dose vaccination pomp model for port-au-prince                                                                                        |
 | leakyvac-pomp-model-inC.R             | pomp model without seasonality (used for Zim and Conakry|
 | leakyvac-pomp-model-inC-seas.R        | pomp model with seasonality (used for Haiti)                                                                                            |
 | pomp-novac-fitting.R                  | Fitting of uncontrolled epidemics in Zimbabwe and Conakry and Port-Au-Prince                                                            |

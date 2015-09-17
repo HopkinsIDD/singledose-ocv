@@ -1,7 +1,7 @@
 ######################################################################################
 ## This file contains scripts/functions for producing key papers for the manuscript ##
 ######################################################################################
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 palette(brewer.pal(8,"Dark2"))
 
 

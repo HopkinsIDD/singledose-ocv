@@ -2,7 +2,7 @@
 ## Here we find the minimum single dose VE for a few different models ##
 ## by doses and time                                                  ##
 ## ------------------------------------------------------------------ ##
-source("Source/R/base-functions.R")
+source("Source/base-functions.R")
 
 ## two dose eff (wtf)
 ve2 <- 0.88
